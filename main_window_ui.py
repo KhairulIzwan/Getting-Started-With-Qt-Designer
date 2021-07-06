@@ -1,0 +1,161 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'ui/main_window.ui'
+#
+# Created by: PyQt4 UI code generator 4.11.4
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt4 import QtCore, QtGui
+
+try:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
+
+class Ui_MainWindow(object):
+    def __init__(self):
+    	pass
+    	
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName(_fromUtf8("MainWindow"))
+        MainWindow.resize(413, 299)
+        self.centralwidget = QtGui.QWidget(MainWindow)
+        self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
+        self.verticalLayout = QtGui.QVBoxLayout(self.centralwidget)
+        self.verticalLayout.setMargin(1)
+        self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
+        self.textEdit = QtGui.QTextEdit(self.centralwidget)
+        self.textEdit.setObjectName(_fromUtf8("textEdit"))
+        self.verticalLayout.addWidget(self.textEdit)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtGui.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 413, 25))
+        self.menubar.setObjectName(_fromUtf8("menubar"))
+        self.menu_File = QtGui.QMenu(self.menubar)
+        self.menu_File.setObjectName(_fromUtf8("menu_File"))
+        self.menuOpen_Recent = QtGui.QMenu(self.menu_File)
+        self.menuOpen_Recent.setObjectName(_fromUtf8("menuOpen_Recent"))
+        self.menu_Edit = QtGui.QMenu(self.menubar)
+        self.menu_Edit.setObjectName(_fromUtf8("menu_Edit"))
+        self.menu_Help = QtGui.QMenu(self.menubar)
+        self.menu_Help.setObjectName(_fromUtf8("menu_Help"))
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtGui.QStatusBar(MainWindow)
+        self.statusbar.setObjectName(_fromUtf8("statusbar"))
+        MainWindow.setStatusBar(self.statusbar)
+        self.toolBar = QtGui.QToolBar(MainWindow)
+        self.toolBar.setObjectName(_fromUtf8("toolBar"))
+        MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
+        self.action_New = QtGui.QAction(MainWindow)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8("ui/resources/file-new.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.action_New.setIcon(icon)
+        self.action_New.setObjectName(_fromUtf8("action_New"))
+        self.action_Open = QtGui.QAction(MainWindow)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(_fromUtf8("ui/resources/file-open.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.action_Open.setIcon(icon1)
+        self.action_Open.setObjectName(_fromUtf8("action_Open"))
+        self.action_Save = QtGui.QAction(MainWindow)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(_fromUtf8("ui/resources/file-save.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.action_Save.setIcon(icon2)
+        self.action_Save.setObjectName(_fromUtf8("action_Save"))
+        self.action_Exit = QtGui.QAction(MainWindow)
+        self.action_Exit.setObjectName(_fromUtf8("action_Exit"))
+        self.actionOpen_All = QtGui.QAction(MainWindow)
+        self.actionOpen_All.setObjectName(_fromUtf8("actionOpen_All"))
+        self.action_Copy = QtGui.QAction(MainWindow)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(_fromUtf8("ui/resources/edit-copy.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.action_Copy.setIcon(icon3)
+        self.action_Copy.setObjectName(_fromUtf8("action_Copy"))
+        self.action_Paste = QtGui.QAction(MainWindow)
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap(_fromUtf8("ui/resources/edit-paste.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.action_Paste.setIcon(icon4)
+        self.action_Paste.setObjectName(_fromUtf8("action_Paste"))
+        self.action_Cut = QtGui.QAction(MainWindow)
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap(_fromUtf8("ui/resources/edit-cut.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.action_Cut.setIcon(icon5)
+        self.action_Cut.setObjectName(_fromUtf8("action_Cut"))
+        self.action_Find_Replace = QtGui.QAction(MainWindow)
+        self.action_Find_Replace.setObjectName(_fromUtf8("action_Find_Replace"))
+        self.action_About = QtGui.QAction(MainWindow)
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap(_fromUtf8("ui/resources/help-content.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.action_About.setIcon(icon6)
+        self.action_About.setObjectName(_fromUtf8("action_About"))
+        self.menuOpen_Recent.addAction(self.actionOpen_All)
+        self.menu_File.addAction(self.action_New)
+        self.menu_File.addSeparator()
+        self.menu_File.addAction(self.action_Open)
+        self.menu_File.addAction(self.menuOpen_Recent.menuAction())
+        self.menu_File.addSeparator()
+        self.menu_File.addAction(self.action_Save)
+        self.menu_File.addSeparator()
+        self.menu_File.addAction(self.action_Exit)
+        self.menu_Edit.addAction(self.action_Copy)
+        self.menu_Edit.addAction(self.action_Paste)
+        self.menu_Edit.addAction(self.action_Cut)
+        self.menu_Edit.addSeparator()
+        self.menu_Edit.addAction(self.action_Find_Replace)
+        self.menu_Help.addAction(self.action_About)
+        self.menubar.addAction(self.menu_File.menuAction())
+        self.menubar.addAction(self.menu_Edit.menuAction())
+        self.menubar.addAction(self.menu_Help.menuAction())
+        self.toolBar.addAction(self.action_New)
+        self.toolBar.addSeparator()
+        self.toolBar.addAction(self.action_Open)
+        self.toolBar.addSeparator()
+        self.toolBar.addAction(self.action_Save)
+        self.toolBar.addSeparator()
+        self.toolBar.addAction(self.action_Copy)
+        self.toolBar.addAction(self.action_Paste)
+        self.toolBar.addAction(self.action_Cut)
+        self.toolBar.addSeparator()
+        self.toolBar.addAction(self.action_About)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
+        self.menu_File.setTitle(_translate("MainWindow", "&File", None))
+        self.menuOpen_Recent.setTitle(_translate("MainWindow", "Open &Recent", None))
+        self.menu_Edit.setTitle(_translate("MainWindow", "&Edit", None))
+        self.menu_Help.setTitle(_translate("MainWindow", "&Help", None))
+        self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar", None))
+        self.action_New.setText(_translate("MainWindow", "&New...", None))
+        self.action_New.setToolTip(_translate("MainWindow", "Create a New Document", None))
+        self.action_New.setShortcut(_translate("MainWindow", "Ctrl+N", None))
+        self.action_Open.setText(_translate("MainWindow", "&Open...", None))
+        self.action_Open.setToolTip(_translate("MainWindow", "Open a Document", None))
+        self.action_Open.setShortcut(_translate("MainWindow", "Ctrl+O", None))
+        self.action_Save.setText(_translate("MainWindow", "&Save...", None))
+        self.action_Save.setToolTip(_translate("MainWindow", "Save the Current Document", None))
+        self.action_Save.setShortcut(_translate("MainWindow", "Ctrl+S", None))
+        self.action_Exit.setText(_translate("MainWindow", "&Exit", None))
+        self.action_Exit.setShortcut(_translate("MainWindow", "Ctrl+W", None))
+        self.actionOpen_All.setText(_translate("MainWindow", "Open All", None))
+        self.action_Copy.setText(_translate("MainWindow", "&Copy...", None))
+        self.action_Copy.setShortcut(_translate("MainWindow", "Ctrl+C", None))
+        self.action_Paste.setText(_translate("MainWindow", "&Paste...", None))
+        self.action_Paste.setShortcut(_translate("MainWindow", "Ctrl+V", None))
+        self.action_Cut.setText(_translate("MainWindow", "&Cut...", None))
+        self.action_Cut.setShortcut(_translate("MainWindow", "Ctrl+X", None))
+        self.action_Find_Replace.setText(_translate("MainWindow", "&Find and Replace...", None))
+        self.action_Find_Replace.setShortcut(_translate("MainWindow", "Ctrl+F", None))
+        self.action_About.setText(_translate("MainWindow", "&About...", None))
+
