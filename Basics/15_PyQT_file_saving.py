@@ -18,7 +18,7 @@ class Window(QtGui.QMainWindow):
 		super(Window, self).__init__()
 		self.setGeometry(50, 50, 500, 500)
 		self.setWindowTitle("PyQT tuts!")
-		self.setWindowIcon(QtGui.QIcon('../ui/resources/help-content.png'))
+		self.setWindowIcon(QtGui.QIcon('../ui/resources/file-new.png'))
 		
 		extractAction = QtGui.QAction("&GET TO THE CHOPPAH!!!", self)
 		extractAction.setShortcut("Ctrl+Q")
@@ -133,6 +133,7 @@ class Window(QtGui.QMainWindow):
             
 	def color_picker(self):
 		color = QtGui.QColorDialog.getColor()
+		print("%s" % color.name())
 		self.styleChoice.setStyleSheet("QWidget { background-color: %s}" % color.name())
 		
 	def editor(self):
